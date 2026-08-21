@@ -1,0 +1,124 @@
+All Key Equations from the JCRIN Framework and Extensions
+
+1. Core JCRIN Definitions
+\[
+\varepsilon = 10^{-9}
+\]
+
+\[
+y_n = n \cdot \varepsilon
+\]
+
+\[
+x_n = 1 - n \cdot \varepsilon
+\]
+
+\[
+n(t) = \lfloor t / \Delta t \rfloor, \qquad \Delta t = t_{\max}/10^9
+\]
+
+2. Equivalency Theorem (Normalization Invariance)
+\[
+x_n + (1 - x_n) = 1
+\]
+
+\[
+y_n + (1 - y_n) = 1
+\]
+
+Normalization Transfer:
+\[
+\phi_n = k_n y_n \quad (k_n > 0)
+\]
+\[
+\phi_n + \text{complement} = k_n y_n + k_n(1 - y_n) = k_n
+\]
+
+3. Sequences
+Main Sequence:
+\[
+y_n = n \cdot 10^{-9}, \quad n = 0,1,\dots,10^9
+\]
+
+Complementary Sequence:
+\[
+x_n = 1 - n \cdot 10^{-9}
+\]
+
+Extended / Multi-Stage (precision-controlled):
+\[
+y_n = n \cdot 10^{-9}
+\]
+(with deliberate decimal truncation according to control digit \(k\))
+
+4. Planck Relation (Unity Factor)
+\[
+h\nu = m c^2 \implies \frac{m c^2}{h\nu} = 1 \quad \text{or} \quad \frac{h\nu}{m c^2} = 1
+\]
+
+5. Stefan-Boltzmann with JCRIN Corrections
+Classical:
+\[
+\sigma = \frac{2\pi^5 k_B^4}{15(h c)^3} = 5.670374419 \times 10^{-8}\ \mathrm{W\,m^{-2}\,K^{-4}}
+\]
+
+Formula 1 (zeta-corrected):
+\
+\sigma_1 = \frac{2\pi^5 k_B^4}{15(h c)^3}\left(1 + \frac{3\zeta(3)}{\pi^2}\right)^{-1} \cdot \frac{m c^2}{h\nu} \cdot S[|\psi|^2\,(x_n + y_n)
+\]
+
+Formula 2:
+\
+\sigma_2 = \frac{2\pi^5 k_B^4}{15 h^3 c^2} \cdot (x_n + y_n)\, S[|\psi|^2 \cdot \frac{h\nu}{m c^2}
+\]
+
+6. Spline-Modulated Factor
+\
+\mathcal{M}(t) = S[|\psi|^2\,(x_n + y_n)
+\]
+
+7. Redshift Damping Factor
+\[
+f_{\rm damp}(z) := e^{-z/5.8} = \exp\left(-\frac{z}{\tau}\right), \qquad \tau = 5.8
+\]
+
+Frequency modulation companion:
+\[
+f_{\rm mod}(z) = 1 + 5\exp(-z/2)
+\]
+
+Composite suppression (conceptual):
+\[
+S(z) = \bigl(1 + 5 e^{-z/2}\bigr) \cdot e^{-z/5.8} \cdot e^{-\chi(z)/4500\,\mathrm{Mpc}}
+\]
+
+8. Torque Integral (Late-time)
+\[
+\Delta H_{\rm torque}(z=0) \propto \int_0^{N_{\rm today}} \bigl[\text{phase bias from tick }n\bigr] \times e^{-\chi(n)/4500} \times e^{-z(n)/5.8} \times f_{\rm mod}(z(n))\, dn
+\]
+
+9. Radiation Energy Density
+\[
+u = \frac{4\sigma_{\rm eff}}{c}\, T^4, \qquad \sigma_{\rm eff}(t) = \sigma_{\rm classical} \cdot \mathcal{M}(t)
+\]
+
+10. Final Boxed Statements
+Equivalency / Normalization Invariance:
+\[
+\forall n,\quad x_n + (1-x_n)=1 \quad\text{and}\quad y_n + (1-y_n)=1
+\]
+Therefore any quantities \(\phi_n \propto y_n\) and \(\langle\hat{H}\rangle_n \propto y_n\) remain normalized with respect to their complements across all epochs.
+
+Characteristic Scale:
+\[
+\boxed{
+\begin{aligned}
+\tau &= 5.8 \\
+&\text{is the characteristic redshift scale governing the exponential decay} \\
+&\text{of coherent coupling efficiency between the microscopic ratchet} \\
+&\text{and the isotropic Hubble flow.}
+\end{aligned}
+}
+\]
+
+These are the principal equations that have structured the entire JCRIN core and its quantum-cosmological extensions developed.
