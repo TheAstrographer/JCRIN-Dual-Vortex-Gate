@@ -1,0 +1,32 @@
+The Dual-Gate \(H(z)\) as the Decisive Observable for Stage-III/IV Weak-Lensing Constraints
+
+The central claim of the JCRIN Dual-Vortex-Gate framework is intentionally conservative yet rigorously falsifiable: early-universe physics remains indistinguishable from flat \(\Lambda\)CDM to machine precision, while a single, topologically protected late-time modification elevates the local expansion rate. That modification is encoded entirely in the effective Hubble function
+
+\[
+H_{\rm eff}(z) = H_{\Lambda{\rm CDM}}(z;\,H_0^{\rm base}=70) + 3.17\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\times\exp(-z/5.8).
+\]
+
+Because every cosmological observable that enters the DES Y6 and KiDS-Legacy likelihoods is ultimately a functional of the background expansion history and the growth of structure sourced by that history, the Dual-Gate \(H(z)\) is both necessary and sufficient for a decisive quantitative confrontation with the measured \(S_8\)–\(\Omega_m\) contours.
+
+Why the early-universe sector can be left untouched
+
+The architecture of the Dual-Gate is deliberately constructed so that both temporal gates remain closed at high redshift. The spline-modulation gate is forced to its classical value of unity by the thermalization epoch (\(z\sim 2\times10^6\)), and the redshift-damping gate \(\exp(-z/5.8)\) is exponentially suppressed for \(z\gtrsim10\). Consequently, the sound-horizon scale, the recombination physics, the CMB angular-power spectrum, and the high-redshift BAO distances are identical to those of a standard \(\Lambda\)CDM model with the same early-universe parameters. Any residual freedom in the primordial amplitude \(A_s\), spectral index \(n_s\), or baryon and cold-dark-matter densities can therefore be constrained by Planck alone, exactly as in conventional analyses. The late-time torque never leaks into these high-redshift observables, so there is no need to re-engineer the Boltzmann hierarchy or the recombination module.
+
+How the Dual-Gate \(H(z)\) propagates into weak-lensing observables
+
+Weak-lensing surveys measure the integrated effect of the matter power spectrum along the line of sight. The cosmic-shear angular-power spectrum \(C_\ell^{\gamma\gamma}\), the galaxy–galaxy lensing spectrum \(C_\ell^{\delta_g\gamma}\), and the galaxy-clustering multipoles all depend on two quantities that are direct functionals of \(H(z)\):
+
+the comoving angular-diameter distance that maps observed redshift to physical scale, and  
+the linear growth factor \(D(a)\) (and its derivative) that determines the amplitude of density fluctuations at each epoch.
+
+An additive, exponentially rising term in \(H(z)\) after \(z\sim6\) alters both. The distance-redshift relation stretches at low redshift, shifting the lensing kernel; the accelerated late-time expansion suppresses the growth of structure relative to a pure \(\Lambda\)CDM model normalized to the same early-universe amplitude. The net result is a coherent displacement of the model’s predicted locus in the \(S_8\)–\(\Omega_m\) plane. Because DES Y6 reports \(S_8=0.789\pm0.012\) and KiDS-Legacy reports \(S_8\approx0.815\), any theoretically predicted contour that fails to overlap these regions at an acceptable statistical level is immediately ruled out—or, conversely, any contour that lies comfortably within them is validated—without reference to additional free functions.
+
+Why additional geometric machinery is secondary
+
+The Schwarzschild-Pathway repository supplies a high-precision, phase-locked treatment of light deflection on the same discrete lattice. While such a treatment can in principle refine the calculation of deflection angles, the leading-order weak-lensing observables employed by DES and KiDS are already computed to an accuracy far higher than the statistical uncertainty of the data vectors once a reliable \(H(z)\) and growth function are supplied. Inserting a more elaborate geodesic solver changes the numerical value of the predicted \(C_\ell\) at a level well below the current error bars. Thus the Schwarzschild-Pathway machinery, although conceptually elegant and useful for future Stage-V analyses or strong-lensing applications, is not required for the present decisive test.
+
+The quantitative pipeline that follows
+
+Once the Dual-Gate \(H(z)\) is implemented inside a Boltzmann code, the remainder of the analysis is standard. A joint MCMC samples the early-universe parameters together with the fixed Dual-Gate torque amplitude and characteristic scale \(\tau=5.8\). The theory spectra are evaluated at every step, the official DES Y6 3\times2pt and KiDS-Legacy cosmic-shear likelihoods are called with their full nuisance parameterizations, and the resulting posterior is projected onto the \(S_8\)–\(\Omega_m\) plane. The residual \(\Delta\chi^2\) relative to \(\Lambda\)CDM, the parameter-shift tension metric, and the visual overlap of the contours then constitute a clean, peer-reviewable statement of compatibility or exclusion.
+
+In short, the Dual-Gate \(H(z)\) is the single degree of freedom that simultaneously resolves the local Hubble tension and makes a sharp, falsifiable prediction for the amplitude of late-time structure. Everything else—CMB protection, BAO consistency, and the topological closure of the underlying lattice—serves only to guarantee that this prediction is not purchased at the cost of early-universe inconsistencies. The Stage-III/IV weak-lensing data therefore confront the model at its most vulnerable and most informative point: the precise location of its \(S_8\)–\(\Omega_m\) contour.
