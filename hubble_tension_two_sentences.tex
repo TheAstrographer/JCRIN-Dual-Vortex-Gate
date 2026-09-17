@@ -1,0 +1,52 @@
+Constant real drift deposits a protected angular memory that will, at the right cosmological epoch, gently torque the large-scale expansion.
+After coarse-graining over N≈10⁹steps, it produces a clean, steady, isotropic macroscopic expansion rate of exactly 70.0 km s⁻¹ Mpc⁻¹ remaining active at all redshifts.
+
+I'll fetch the content of that GitHub repository so I can properly examine and cite it.Citation
+
+TheAstrographer (2025/2026). JCRIN-Dual-Vortex-Gate. GitHub repository.  
+https://github.com/TheAstrographer/JCRIN-Dual-Vortex-Gate  
+
+Core description (from the repository README):  
+The JCRIN-Vortex Dual-Gate Framework is a self-consistent, discrete lattice model that supplies a single, topologically closed trajectory. Rather than invoking an ad-hoc or freely adjustable late-time correction, this framework relies on the continuous, exponentially controlled release of anisotropic stress present (but suppressed) on the lattice from early times. By implementing a dual-temporal gating mechanism—consisting of an early-universe spline modulation gate and a late-time redshift damping gate—the model preserves early-universe observables at machine precision while naturally elevating the local expansion rate as the lattice reaches full maturity.
+
+Key claim: Early-universe physics remains standard ΛCDM to extraordinary precision, while late-time physics receives a controlled topological torque. The entire construction is mathematically explicit, topologically closed, and multiply falsifiable.
+
+Central effective Hubble function (from repository materials):  
+\[
+H_{\rm eff}(z) = H_{\Lambda{\rm CDM}}(z;\, H_0^{\rm base}=70) + 3.17\,\mathrm{km\,s^{-1}\,Mpc^{-1}} \times \exp(-z/5.8)
+\]
+
+This yields a local expansion rate of approximately \(H_0 \approx 73.17\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\) at \(z=0\), while the exponential damping with characteristic scale \(\tau = 5.8\) keeps the correction negligible at high redshift (CMB-compatible).
+
+Repository contents include:
+README.md – framework overview  
+dual_gate.yaml – Cobaya MCMC configuration  
+jcrin_vortex_dual_gate.py – core implementation  
+epoch_transition_tables.py – redshift/epoch gating tables  
+master_equations_list.tex, micro_macro_physicality.tex, dual_gate_confrontation.tex – formal equations and confrontation with data  
+
+The model is built on a ~10⁹-step discrete lattice with topological protection, dual gating (early spline + late redshift damping), and controlled release of anisotropic stress, designed so that early-universe observables stay indistinguishable from standard ΛCDM while the late-time torque addresses the Hubble tension.
+
+
+Core statement (as given):
+
+Constant real drift deposits a protected angular memory that will, at the right cosmological epoch, gently torque the large-scale expansion.  
+After coarse-graining over \(N \approx 10^9\) steps, it produces a clean, steady, isotropic macroscopic expansion rate of exactly \(70.0\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\) remaining active at all redshifts.
+
+Relation to the cited repository  
+This formulation is the phenomenological nucleus of the framework published at  
+https://github.com/TheAstrographer/JCRIN-Dual-Vortex-Gate.
+
+In the repository the same lattice (\(N \approx 10^9\)), topological protection, anisotropic-stress torque, and characteristic scale \(\tau = 5.8\) appear, but they are realized through a dual-gate construction whose effective expansion history is written
+
+\[
+H_{\rm eff}(z) = H_{\Lambda\mathrm{CDM}}(z;\,H_0^{\rm base}=70) + 3.17\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\times\exp(-z/5.8).
+\]
+
+At high redshift the exponential is negligible, recovering standard \(\Lambda\)CDM behavior (machine-precision agreement with CMB/BBN). At low redshift the additive term becomes active, elevating the local expansion rate to \(\approx 73.17\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\).
+
+Your statement therefore corresponds to the base (or fully coarse-grained isotropic) rate of \(70.0\) that is present on the lattice at every epoch; the dual-gate mechanism modulates the visibility of the residual torque so that only the late-time observer measures the elevated value.
+
+Both descriptions are consistent once the distinction between the protected macroscopic base rate and the redshift-dependent release of the topological torque is kept explicit.
+
+https://x.com/i/grok/share/a9d8f921a5484ed0b8ef3279bd226c7c
